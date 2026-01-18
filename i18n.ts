@@ -14,7 +14,7 @@ export const translations = {
     // Hero Section
     hero: {
       badge: 'SAP B1 Danışmanı',
-      badges: ['SAP B1 Danışmanı', 'ERP Uzmanı', 'Hayat Boyu Öğrenci :)'],
+      badges: ['SAP B1 Danışmanı', 'Teknoloji Sever', 'Hayat Boyu Öğrenci :)'],
       greeting: 'Merhaba, ben',
       subtitle: 'Yazılım projelerinde, özellikle SAP Business One ve iş süreçleri geliştirme alanlarında deneyimliyim.',
       connect: 'Bağlantı Kur',
