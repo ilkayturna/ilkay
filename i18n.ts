@@ -14,9 +14,9 @@ export const translations = {
     // Hero Section
     hero: {
       badge: 'SAP B1 Danışmanı',
-      badges: ['SAP B1 Danışmanı', 'ERP Uzmanı', 'Süreç Analisti'],
+      badges: ['SAP B1 Danışmanı', 'ERP Uzmanı', 'Hayat Boyu Öğrenci :)'],
       greeting: 'Merhaba, ben',
-      subtitle: 'SAP Business One uzmanlığıyla KOBİ\'lerin ERP dönüşümünü yöneten, SQL ve süreç analizi ile iş verimliliğini artıran Jr. ERP Danışmanı.',
+      subtitle: 'Yazılım projelerinde, özellikle SAP Business One ve iş süreçleri geliştirme alanlarında deneyimliyim.',
       connect: 'Bağlantı Kur',
       contact: 'İletişime Geç',
       call: 'Ara',
