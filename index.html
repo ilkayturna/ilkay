@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>İlkay Turna | SAP Danışmanı</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
       body {
@@ -21,9 +26,12 @@
         background-color: #cbd5e1;
         border-radius: 20px;
       }
+      .dark .scrollbar-thin::-webkit-scrollbar-thumb {
+        background-color: #475569;
+      }
     </style>
 </head>
-  <body class="bg-slate-50 text-slate-800 antialiased">
+  <body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 antialiased transition-colors duration-300">
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>

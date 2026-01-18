@@ -4,10 +4,10 @@ export const PROFILE = {
   name: "İlkay Turna",
   title: "SAP Danışmanı",
   location: "İstanbul, Türkiye",
-  email: "ilkay.turna@example.com", // Placeholder
-  linkedin: "https://www.linkedin.com/in/ilkay-turna",
+  email: "ilkayt1919@gmail.com",
+  linkedin: "https://www.linkedin.com/in/ilkay-t-ba3aa6237",
   about: "Staj dönemimde sahada kazandığım pratik deneyimi şu anda Hitsoft'ta ERP Kıdemli Uzman Yardımcısı olarak, gerçek projelerde uçtan uca süreçlere dahil olarak pekiştiriyorum. SAP Business One başta olmak üzere, ERP sistemlerinin yalnızca teknik altyapısını değil, aynı zamanda iş stratejileriyle nasıl bütünleşmesi gerektiğini de analiz ederek uygulamaya geçiriyorum. Sorun çözme, yönetim ve iletişim konularında yetkinim.",
-  avatarUrl: "https://picsum.photos/id/64/400/400", // Placeholder matching professional look
+  avatarUrl: "/image.png",
   coverUrl: "https://picsum.photos/id/3/1200/400"
 };
 
@@ -16,7 +16,7 @@ export const EXPERIENCES: Experience[] = [
     id: '1',
     role: 'SAP B1 Consultant',
     company: 'Hitsoft',
-    period: 'Tem 2023 - Halen',
+    period: 'Tem 2025 - Halen',
     location: 'İstanbul, Türkiye',
     description: 'SAP Business One ERP sistemleri üzerine danışmanlık, süreç analizi ve uygulama. Araştırma ve Veri Analizi.',
     skills: ['SAP B1', 'SQL', 'ERP', 'Süreç Analizi']
@@ -25,7 +25,7 @@ export const EXPERIENCES: Experience[] = [
     id: '2',
     role: 'SAP B1 Consultant Intern',
     company: 'Hitsoft',
-    period: 'Şub 2023 - Haz 2023',
+    period: 'Şub 2025 - Haz 2025',
     location: 'İstanbul, Türkiye',
     description: 'SAP B1 Sorun Giderme ve destek süreçlerinde aktif rol alma.',
     skills: ['Destek', 'Dokümantasyon']
@@ -62,6 +62,12 @@ export const EDUCATION: Education[] = [
     school: 'Anadolu Üniversitesi',
     degree: 'Ön Lisans, Computer Programming',
     period: 'Eki 2024 - Haz 2026'
+  },
+  {
+    id: '3',
+    school: 'Güngören Anadolu Lisesi',
+    degree: 'Lise',
+    period: '2017 - 2021'
   }
 ];
 
@@ -71,6 +77,7 @@ export const CERTIFICATIONS: Certification[] = [
     title: 'SAP Business One - Certificate of Achievement',
     issuer: 'UPEXTECH',
     date: 'Oca 2025',
+    link: 'https://drive.google.com/file/d/1ovPFEbTJBKFTC2jnpahcPafeFx6MY4S8/view',
     icon: 'certificate'
   },
   {
@@ -85,6 +92,14 @@ export const CERTIFICATIONS: Certification[] = [
     title: 'English Proficiency Certificate',
     issuer: 'Sakarya University (Erasmus Exam)',
     date: 'Mar 2022',
+    icon: 'certificate'
+  },
+  {
+    id: '4',
+    title: 'İlk Yardım Eğitimi',
+    issuer: 'İBB İtfaiye',
+    date: '2024',
+    link: 'https://itfaiye.ibb.gov.tr/m/tr/ilkyardim-egitimleri.html',
     icon: 'certificate'
   }
 ];

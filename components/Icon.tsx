@@ -12,7 +12,12 @@ import {
   Send,
   Download,
   Menu,
-  ChevronRight
+  ChevronRight,
+  Sun,
+  Moon,
+  Globe,
+  FileText,
+  ExternalLink
 } from 'lucide-react';
 
 export const Icons = {
@@ -28,7 +33,12 @@ export const Icons = {
   Send,
   Download,
   Menu,
-  ChevronRight
+  ChevronRight,
+  Sun,
+  Moon,
+  Globe,
+  FileText,
+  ExternalLink
 };
 
 interface IconProps {

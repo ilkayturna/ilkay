@@ -27,6 +27,21 @@ export interface Certification {
   icon?: 'certificate' | 'award';
 }
 
+export interface TranslatedCertification {
+  id: string;
+  title: string;
+  issuer: string;
+  date: string;
+  link?: string;
+}
+
+export interface TranslatedEducation {
+  id: string;
+  school: string;
+  degree: string;
+  period: string;
+}
+
 export interface ChatMessage {
   id: string;
   role: 'user' | 'model';
