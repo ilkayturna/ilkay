@@ -81,7 +81,7 @@ export const translations = {
     },
     // Contact Section
     contact: {
-      title: 'Birlikte Çalışalım',
+      title: 'Yeni Tekliflere Açığım.',
       subtitle: 'İş fırsatları ve projeler için benimle iletişime geçin.',
       copyright: 'Tüm hakları saklıdır.',
     },
@@ -192,11 +192,11 @@ export const translations = {
     // Skills
     skillsList: {
       technical: [
-        "SAP Business One",
-        "ERP Danışmanlığı",
+        "ERP",
+        "Git&Github",
         "SQL",
-        "Veri Analizi",
-        "Süreç Yönetimi"
+        "Python",
+        "MsOffice"
       ],
       soft: [
         "İş Analizi",
