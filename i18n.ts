@@ -13,12 +13,13 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      badge: 'SAP Danışmanı',
-      badges: ['SAP Danışmanı', 'Teknoloji Sever', 'Hayat Boyu Öğrenci :)'],
+      badge: 'SAP B1 Danışmanı',
+      badges: ['SAP B1 Danışmanı', 'ERP Uzmanı', 'Süreç Analisti'],
       greeting: 'Merhaba, ben',
-      subtitle: 'İş stratejilerini teknik mükemmellikle buluşturan, süreç analizi ve ERP sistemleri konusunda uzmanlaşmış bir profesyonelim.',
+      subtitle: 'SAP Business One uzmanlığıyla KOBİ\'lerin ERP dönüşümünü yöneten, SQL ve süreç analizi ile iş verimliliğini artıran Jr. ERP Danışmanı.',
       connect: 'Bağlantı Kur',
       contact: 'İletişime Geç',
+      call: 'Ara',
     },
     // About Section
     about: {
@@ -36,42 +37,45 @@ export const translations = {
     // Skills Section
     skills: {
       title: 'Yetenekler',
+      technical: 'Teknik Yetenekler',
+      soft: 'İş Becerileri',
       languages: 'Diller',
       turkish: 'Türkçe',
       english: 'İngilizce',
       native: 'Ana Dil',
-      professional: 'Profesyonel',
+      englishLevel: 'B2 - Upper Intermediate',
     },
     // Projects Section
     projects: {
       title: 'Projelerim',
-      viewProject: 'Projeyi Görüntüle →',
+      viewProject: 'Canlı Demo →',
       projectsList: [
         {
           id: '1',
-          title: 'Turna Elektrik Dijital Dönüşüm',
-          description: 'Aile işletmemizi dijital platforma taşıyarak köklü bir dönüşüm gerçekleştirdim.',
+          title: 'Jira Worklog Manager',
+          description: 'Manuel worklog girişi sorununu çözen, AI destekli verimlilik aracı.',
           highlights: [
-            'Ayda 5-10 referans müşteriden → 350+ organik müşteri portföyüne ulaşıldı',
-            'Google Business ve sosyal medya entegrasyonu ile dijital varlık oluşturuldu',
-            'Haftalık stratejik planlamalarla ekip küçük/orta/büyük projelere segmente edildi',
-            'İşletme cirosunda %400+ artış sağlandı'
+            'Problem: Günlük 30+ dakika manuel Jira log girişi',
+            'Çözüm: React + AI ile otomatik worklog yönetimi',
+            'Sonuç: %85 verimlilik artışı (30dk → 5dk)',
+            'Jira Cloud API entegrasyonu ile gerçek zamanlı senkronizasyon',
+            'Sürükle-bırak arayüzü ve akıllı saat dağıtımı'
           ],
-          tags: ['Dijital Dönüşüm', 'Strateji', 'İşletme Yönetimi']
+          tags: ['React', 'TypeScript', 'AI', 'Jira API'],
+          link: 'https://jira-worklog-ivory.vercel.app/'
         },
         {
           id: '2',
-          title: 'Jira Worklog Manager',
-          description: 'Yapay zeka destekli worklog yönetim uygulaması geliştirdim.',
+          title: 'Turna Elektrik - Dijital Dönüşüm',
+          description: 'Geleneksel aile işletmesini dijital platforma taşıyan strateji projesi.',
           highlights: [
-            '30+ dakikalık manuel log girişi → 5 dakikaya indirildi',
-            'AI metin iyileştirme ve otomatik imla düzeltme',
-            'Akıllı saat dağıtımı ve Excel entegrasyonu',
-            'Jira Cloud senkronizasyonu ve sürükle-bırak arayüzü',
-            'İş süreçlerinde %85 verimlilik artışı'
+            'Problem: Ayda sadece 5-10 referans müşteri',
+            'Çözüm: Google Business + sosyal medya entegrasyonu',
+            'Sonuç: 350+ organik müşteri portföyü',
+            'İşletme cirosunda %400+ artış',
+            'Haftalık stratejik planlama sistemi kurulumu'
           ],
-          tags: ['React', 'AI', 'Jira API', 'Verimlilik'],
-          link: 'https://jira-worklog-ivory.vercel.app/'
+          tags: ['Dijital Strateji', 'İş Geliştirme', 'Operasyon']
         }
       ]
     },
@@ -92,9 +96,9 @@ export const translations = {
     },
     // Profile data
     profile: {
-      title: 'SAP Danışmanı',
+      title: 'SAP B1 Danışmanı',
       location: 'İstanbul, Türkiye',
-      about: "Staj dönemimde sahada kazandığım pratik deneyimi şu anda Hitsoft'ta ERP Kıdemli Uzman Yardımcısı olarak, gerçek projelerde uçtan uca süreçlere dahil olarak pekiştiriyorum. SAP Business One başta olmak üzere, ERP sistemlerinin yalnızca teknik altyapısını değil, aynı zamanda iş stratejileriyle nasıl bütünleşmesi gerektiğini de analiz ederek uygulamaya geçiriyorum. Sorun çözme, yönetim ve iletişim konularında yetkinim.",
+      about: "Yönetim Bilişim Sistemleri mezunu, SAP Business One odaklı ERP Danışmanıyım. Hitsoft'ta KOBİ müşterilerine uçtan uca ERP implementasyonu ve süreç danışmanlığı yapıyorum. SQL ile veri analizi, iş süreçleri optimizasyonu ve teknik destek konularında aktif projeler yürütüyorum. Teknik bilgiyi iş değerine dönüştürmeyi ve ölçülebilir sonuçlar üretmeyi önemsiyorum. Side project olarak geliştirdiğim Jira Worklog Manager ile ekip verimliliğinde %85 artış sağladım.",
     },
     // Experiences
     experiences: [
@@ -104,7 +108,7 @@ export const translations = {
         company: 'Hitsoft',
         period: 'Tem 2025 - Halen',
         location: 'İstanbul, Türkiye',
-        description: 'SAP Business One ERP sistemleri üzerine danışmanlık, süreç analizi ve uygulama. Araştırma ve Veri Analizi.',
+        description: 'KOBİ müşterilerine SAP Business One ERP implementasyonu ve uçtan uca süreç danışmanlığı. SQL ile özelleştirilmiş raporlama çözümleri. Satış, satın alma ve stok modüllerinde süreç iyileştirme. 10+ firmada destek süreçlerinde aktif rol.',
         skills: ['SAP B1', 'SQL', 'ERP', 'Süreç Analizi']
       },
       {
@@ -113,41 +117,41 @@ export const translations = {
         company: 'Hitsoft',
         period: 'Şub 2025 - Haz 2025',
         location: 'İstanbul, Türkiye',
-        description: 'SAP B1 Sorun Giderme ve destek süreçlerinde aktif rol alma.',
-        skills: ['Destek', 'Dokümantasyon']
+        description: 'SAP B1 teknik destek ve sorun giderme süreçlerinde hands-on deneyim. Müşteri taleplerinin analizi ve dokümantasyonu. Canlı projelerde danışman ekibiyle birlikte çalışma.',
+        skills: ['Teknik Destek', 'Dokümantasyon', 'Müşteri İletişimi']
       },
       {
         id: '3',
-        role: 'Mutfak Personeli',
+        role: 'Mutfak Şefi',
         company: 'TAB Gıda',
         period: 'Şub 2021 - Eki 2021',
         location: 'İstanbul, Türkiye',
-        description: 'Ekip çalışması ve müşteri deneyimi üzerine tecrübe.',
-        skills: ['Takım Çalışması', 'Müşteri İlişkileri']
+        description: 'Yoğun tempolu iş ortamında takım çalışması ve müşteri deneyimi odaklı çalışma. Zaman yönetimi ve stres altında performans.',
+        skills: ['Takım Çalışması', 'Müşteri İlişkileri', 'Zaman Yönetimi']
       },
       {
         id: '4',
-        role: 'Elektrik Teknisyeni',
+        role: 'Dijital Dönüşüm Lideri',
         company: 'Turna Elektrik',
         period: 'Haz 2015 - Eyl 2021',
         location: 'İstanbul, Türkiye',
-        description: 'Dönemsel altyapı ve operasyon yönetimi.',
-        skills: ['Teknik Altyapı', 'Operasyon Yönetimi']
+        description: 'Aile işletmesinin dijital dönüşümünü yönettim. Google Business ve sosyal medya entegrasyonu. Müşteri portföyünü 10 referanstan 350+ organik müşteriye çıkardım. İşletme cirosunda %400+ artış sağladım.',
+        skills: ['Dijital Dönüşüm', 'Strateji', 'Operasyon Yönetimi']
       }
     ],
     // Education
     educationList: [
       {
         id: '1',
-        school: 'Sakarya Üniversitesi',
-        degree: 'Lisans, Yönetim Bilişim Sistemleri',
-        period: 'Eyl 2021 - Haz 2025'
-      },
-      {
-        id: '2',
         school: 'Anadolu Üniversitesi',
         degree: 'Ön Lisans, Bilgisayar Programcılığı',
         period: 'Eki 2024 - Haz 2026'
+      },
+      {
+        id: '2',
+        school: 'Sakarya Üniversitesi',
+        degree: 'Lisans, Yönetim Bilişim Sistemleri',
+        period: 'Eyl 2021 - Haz 2025'
       },
       {
         id: '3',
@@ -186,17 +190,22 @@ export const translations = {
       }
     ],
     // Skills
-    skillsList: [
-      "SAP Business One",
-      "ERP Danışmanlığı",
-      "SQL",
-      "Veri Analizi",
-      "Süreç Yönetimi",
-      "İş Analizi",
-      "Sorun Çözme",
-      "İngilizce (Profesyonel)",
-      "Takım Çalışması"
-    ],
+    skillsList: {
+      technical: [
+        "SAP Business One",
+        "ERP Danışmanlığı",
+        "SQL",
+        "Veri Analizi",
+        "Süreç Yönetimi"
+      ],
+      soft: [
+        "İş Analizi",
+        "Sorun Çözme",
+        "Takım Çalışması",
+        "Müşteri İletişimi",
+        "Proje Yönetimi"
+      ]
+    },
   },
   en: {
     // Navigation
@@ -210,12 +219,13 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      badge: 'SAP Consultant',
-      badges: ['SAP Consultant', 'Tech Enthusiast', 'Lifelong Learner :)'],
+      badge: 'SAP B1 Consultant',
+      badges: ['SAP B1 Consultant', 'ERP Specialist', 'Process Analyst'],
       greeting: "Hello, I'm",
-      subtitle: 'A professional specialized in process analysis and ERP systems, bridging business strategies with technical excellence.',
+      subtitle: 'Jr. ERP Consultant specializing in SAP Business One implementation for SMEs, driving business efficiency through SQL and process analysis.',
       connect: 'Connect',
       contact: 'Contact Me',
+      call: 'Call',
     },
     // About Section
     about: {
@@ -233,42 +243,45 @@ export const translations = {
     // Skills Section
     skills: {
       title: 'Skills',
+      technical: 'Technical Skills',
+      soft: 'Soft Skills',
       languages: 'Languages',
       turkish: 'Turkish',
       english: 'English',
       native: 'Native',
-      professional: 'Professional',
+      englishLevel: 'B2 - Upper Intermediate',
     },
     // Projects Section
     projects: {
       title: 'Projects',
-      viewProject: 'View Project →',
+      viewProject: 'Live Demo →',
       projectsList: [
         {
           id: '1',
-          title: 'Turna Electric Digital Transformation',
-          description: 'I transformed our family business by moving it to a digital platform.',
+          title: 'Jira Worklog Manager',
+          description: 'AI-powered productivity tool solving manual worklog entry problem.',
           highlights: [
-            'From 5-10 referral customers/month → 350+ organic customer portfolio',
-            'Created digital presence with Google Business and social media integration',
-            'Team segmented into small/medium/large projects with weekly strategic planning',
-            '400%+ increase in business revenue'
+            'Problem: 30+ minutes daily manual Jira log entry',
+            'Solution: React + AI automated worklog management',
+            'Result: 85% efficiency gain (30min → 5min)',
+            'Jira Cloud API integration for real-time sync',
+            'Drag-and-drop interface with smart time distribution'
           ],
-          tags: ['Digital Transformation', 'Strategy', 'Business Management']
+          tags: ['React', 'TypeScript', 'AI', 'Jira API'],
+          link: 'https://jira-worklog-ivory.vercel.app/'
         },
         {
           id: '2',
-          title: 'Jira Worklog Manager',
-          description: 'Developed an AI-powered worklog management application.',
+          title: 'Turna Electric - Digital Transformation',
+          description: 'Strategy project transforming traditional family business to digital platform.',
           highlights: [
-            '30+ minutes of manual log entry → reduced to 5 minutes',
-            'AI text improvement and automatic spell correction',
-            'Smart time distribution and Excel integration',
-            'Jira Cloud sync and drag-and-drop interface',
-            '85% efficiency increase in work processes'
+            'Problem: Only 5-10 referral customers per month',
+            'Solution: Google Business + social media integration',
+            'Result: 350+ organic customer portfolio',
+            '400%+ increase in business revenue',
+            'Weekly strategic planning system implementation'
           ],
-          tags: ['React', 'AI', 'Jira API', 'Productivity'],
-          link: 'https://jira-worklog-ivory.vercel.app/'
+          tags: ['Digital Strategy', 'Business Development', 'Operations']
         }
       ]
     },
@@ -289,9 +302,9 @@ export const translations = {
     },
     // Profile data
     profile: {
-      title: 'SAP Consultant',
+      title: 'SAP B1 Consultant',
       location: 'Istanbul, Turkey',
-      about: "I'm currently reinforcing the practical experience I gained during my internship as a Senior ERP Specialist Assistant at Hitsoft, participating in end-to-end processes in real projects. Particularly with SAP Business One, I analyze and implement not only the technical infrastructure of ERP systems but also how they should integrate with business strategies. I'm competent in problem-solving, management, and communication.",
+      about: "Management Information Systems graduate, SAP Business One focused ERP Consultant. At Hitsoft, I provide end-to-end ERP implementation and process consulting for SME clients. I work on data analysis with SQL, business process optimization, and technical support. I focus on transforming technical knowledge into business value and producing measurable results. My side project Jira Worklog Manager achieved 85% efficiency improvement in team productivity.",
     },
     // Experiences
     experiences: [
@@ -301,7 +314,7 @@ export const translations = {
         company: 'Hitsoft',
         period: 'Jul 2025 - Present',
         location: 'Istanbul, Turkey',
-        description: 'Consulting on SAP Business One ERP systems, process analysis and implementation. Research and Data Analysis.',
+        description: 'End-to-end SAP Business One ERP implementation and process consulting for SME clients. Custom reporting solutions with SQL. Process improvement in sales, purchasing and inventory modules. Active role in support processes for 10+ companies.',
         skills: ['SAP B1', 'SQL', 'ERP', 'Process Analysis']
       },
       {
@@ -310,41 +323,41 @@ export const translations = {
         company: 'Hitsoft',
         period: 'Feb 2025 - Jun 2025',
         location: 'Istanbul, Turkey',
-        description: 'Active role in SAP B1 troubleshooting and support processes.',
-        skills: ['Support', 'Documentation']
+        description: 'Hands-on experience in SAP B1 technical support and troubleshooting. Analysis and documentation of customer requests. Working alongside consultant team on live projects.',
+        skills: ['Technical Support', 'Documentation', 'Client Communication']
       },
       {
         id: '3',
-        role: 'Kitchen Staff',
+        role: 'Kitchen Chef',
         company: 'TAB Gıda',
         period: 'Feb 2021 - Oct 2021',
         location: 'Istanbul, Turkey',
-        description: 'Experience in teamwork and customer experience.',
-        skills: ['Teamwork', 'Customer Relations']
+        description: 'Teamwork and customer experience focused work in fast-paced environment. Time management and performance under pressure.',
+        skills: ['Teamwork', 'Customer Relations', 'Time Management']
       },
       {
         id: '4',
-        role: 'Electrical Technician',
+        role: 'Digital Transformation Lead',
         company: 'Turna Elektrik',
         period: 'Jun 2015 - Sep 2021',
         location: 'Istanbul, Turkey',
-        description: 'Periodic infrastructure and operations management.',
-        skills: ['Technical Infrastructure', 'Operations Management']
+        description: 'Led digital transformation of family business. Google Business and social media integration. Grew customer portfolio from 10 referrals to 350+ organic customers. Achieved 400%+ increase in business revenue.',
+        skills: ['Digital Transformation', 'Strategy', 'Operations Management']
       }
     ],
     // Education
     educationList: [
       {
         id: '1',
-        school: 'Sakarya University',
-        degree: 'Bachelor, Management Information Systems',
-        period: 'Sep 2021 - Jun 2025'
-      },
-      {
-        id: '2',
         school: 'Anadolu University',
         degree: 'Associate, Computer Programming',
         period: 'Oct 2024 - Jun 2026'
+      },
+      {
+        id: '2',
+        school: 'Sakarya University',
+        degree: 'Bachelor, Management Information Systems',
+        period: 'Sep 2021 - Jun 2025'
       },
       {
         id: '3',
@@ -383,17 +396,22 @@ export const translations = {
       }
     ],
     // Skills
-    skillsList: [
-      "SAP Business One",
-      "ERP Consulting",
-      "SQL",
-      "Data Analysis",
-      "Process Management",
-      "Business Analysis",
-      "Problem Solving",
-      "English (Professional)",
-      "Teamwork"
-    ],
+    skillsList: {
+      technical: [
+        "SAP Business One",
+        "ERP Consulting",
+        "SQL",
+        "Data Analysis",
+        "Process Management"
+      ],
+      soft: [
+        "Business Analysis",
+        "Problem Solving",
+        "Teamwork",
+        "Client Communication",
+        "Project Management"
+      ]
+    },
   }
 };
 

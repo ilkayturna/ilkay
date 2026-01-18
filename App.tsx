@@ -81,9 +81,9 @@ const App: React.FC = () => {
   const navItems = [
     { id: 'about', label: t.nav.about },
     { id: 'experience', label: t.nav.experience },
+    { id: 'projects', label: t.nav.projects },
     { id: 'education', label: t.nav.education },
     { id: 'skills', label: t.nav.skills },
-    { id: 'projects', label: t.nav.projects },
   ];
 
   const toggleLanguage = () => {
@@ -115,7 +115,7 @@ const App: React.FC = () => {
                 </button>
               ))}
               <a 
-                href="https://drive.google.com/file/d/11bqoUkhZEU5785qnkj6dxeRZSVjZWso1/view" 
+                href="https://drive.google.com/file/d/1Y1jW8tpNxS3FGa5-qJZpvi0FqknfrH12/view?usp=sharing" 
                 target="_blank" 
                 rel="noreferrer"
                 className="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-sm font-medium hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors flex items-center gap-1.5"
@@ -230,6 +230,13 @@ const App: React.FC = () => {
                     <Icon name="Mail" size={20} />
                     {t.hero.contact}
                   </a>
+                  <a 
+                    href="tel:+905343622375"
+                    className="px-6 py-3 bg-green-600 dark:bg-green-500 text-white rounded-lg font-semibold hover:bg-green-700 dark:hover:bg-green-600 transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
+                  >
+                    <Icon name="Phone" size={20} />
+                    {t.hero.call}
+                  </a>
                 </div>
               </div>
               <div className="relative">
@@ -249,13 +256,13 @@ const App: React.FC = () => {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-20 bg-white dark:bg-slate-800 transition-colors duration-300">
+        <section id="about" className="py-20 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-3">
               <span className="w-2 h-8 bg-blue-600 rounded-full"></span>
               {t.about.title}
             </h2>
-            <div className="prose prose-lg text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-700/50 p-8 rounded-2xl border border-slate-100 dark:border-slate-600">
+            <div className="prose prose-lg text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700">
               <p>{t.profile.about}</p>
             </div>
             
@@ -279,12 +286,12 @@ const App: React.FC = () => {
                     href={cert.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="bg-white dark:bg-slate-700 p-6 rounded-xl border border-slate-200 dark:border-slate-600 shadow-sm hover:shadow-md hover:border-blue-300 dark:hover:border-blue-500 transition-all cursor-pointer block"
+                    className="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md hover:border-blue-300 dark:hover:border-blue-500 transition-all cursor-pointer block"
                   >
                     {CardContent}
                   </a>
                 ) : (
-                  <div key={cert.id} className="bg-white dark:bg-slate-700 p-6 rounded-xl border border-slate-200 dark:border-slate-600 shadow-sm hover:shadow-md transition-shadow">
+                  <div key={cert.id} className="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
                     {CardContent}
                   </div>
                 );
@@ -294,87 +301,13 @@ const App: React.FC = () => {
         </section>
 
         {/* Experience Section */}
-        <section id="experience" className="py-20 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+        <section id="experience" className="py-20 bg-white dark:bg-slate-800 transition-colors duration-300">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
               <span className="w-2 h-8 bg-blue-600 rounded-full"></span>
               {t.experience.title}
             </h2>
             <Timeline experiences={t.experiences} />
-          </div>
-        </section>
-
-        {/* Education & Skills Grid */}
-        <section id="education" className="py-20 bg-white dark:bg-slate-800 transition-colors duration-300">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              
-              {/* Education */}
-              <div>
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-3">
-                  <span className="w-2 h-8 bg-blue-600 rounded-full"></span>
-                  {t.education.title}
-                </h2>
-                <div className="space-y-6">
-                  {t.educationList.map((edu) => (
-                    <div key={edu.id} className="flex gap-4 p-6 rounded-2xl bg-slate-50 dark:bg-slate-700/50 border border-slate-100 dark:border-slate-600 hover:border-blue-200 dark:hover:border-blue-500 transition-colors">
-                      <div className="mt-1">
-                        <div className="w-12 h-12 bg-white dark:bg-slate-600 rounded-lg shadow-sm flex items-center justify-center text-blue-600 dark:text-blue-400">
-                          <Icon name="GraduationCap" size={24} />
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-lg text-slate-900 dark:text-white">{edu.school}</h3>
-                        <p className="text-slate-700 dark:text-slate-300 font-medium">{edu.degree}</p>
-                        <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">{edu.period}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Skills */}
-              <div id="skills">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-3">
-                  <span className="w-2 h-8 bg-blue-600 rounded-full"></span>
-                  {t.skills.title}
-                </h2>
-                <div className="bg-slate-50 dark:bg-slate-700/50 p-8 rounded-3xl border border-slate-100 dark:border-slate-600">
-                  <div className="flex flex-wrap gap-3">
-                    {t.skillsList.map((skill, index) => (
-                      <div key={index} className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-600 rounded-lg text-slate-700 dark:text-slate-200 font-medium shadow-sm border border-slate-200 dark:border-slate-500">
-                         <Icon name="CheckCircle" size={16} className="text-green-500" />
-                         {skill}
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="mt-8 pt-8 border-t border-slate-200 dark:border-slate-600">
-                    <h3 className="font-semibold text-slate-900 dark:text-white mb-4">{t.skills.languages}</h3>
-                    <div className="space-y-3">
-                      <div>
-                        <div className="flex justify-between text-sm mb-1">
-                          <span className="font-medium text-slate-700 dark:text-slate-300">{t.skills.turkish}</span>
-                          <span className="text-slate-500 dark:text-slate-400">{t.skills.native}</span>
-                        </div>
-                        <div className="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2">
-                          <div className="bg-blue-600 h-2 rounded-full w-full"></div>
-                        </div>
-                      </div>
-                      <div>
-                        <div className="flex justify-between text-sm mb-1">
-                          <span className="font-medium text-slate-700 dark:text-slate-300">{t.skills.english}</span>
-                          <span className="text-slate-500 dark:text-slate-400">{t.skills.professional}</span>
-                        </div>
-                        <div className="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2">
-                          <div className="bg-blue-600 h-2 rounded-full w-[85%]"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -423,6 +356,97 @@ const App: React.FC = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Education & Skills Grid */}
+        <section id="education" className="py-20 bg-white dark:bg-slate-800 transition-colors duration-300">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              
+              {/* Skills */}
+              <div id="skills">
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-3">
+                  <span className="w-2 h-8 bg-blue-600 rounded-full"></span>
+                  {t.skills.title}
+                </h2>
+                <div className="bg-slate-50 dark:bg-slate-700/50 p-8 rounded-3xl border border-slate-100 dark:border-slate-600">
+                  {/* Technical Skills */}
+                  <div className="mb-6">
+                    <h3 className="font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                      <Icon name="Briefcase" size={18} className="text-blue-600" />
+                      {t.skills.technical}
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {t.skillsList.technical.map((skill, index) => (
+                        <div key={index} className="flex items-center gap-2 px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 rounded-lg text-blue-700 dark:text-blue-300 text-sm font-medium border border-blue-200 dark:border-blue-800">
+                           <Icon name="CheckCircle" size={14} className="text-blue-500" />
+                           {skill}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Soft Skills */}
+                  <div className="mb-6 pt-6 border-t border-slate-200 dark:border-slate-600">
+                    <h3 className="font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                      <Icon name="Award" size={18} className="text-green-600" />
+                      {t.skills.soft}
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {t.skillsList.soft.map((skill, index) => (
+                        <div key={index} className="flex items-center gap-2 px-3 py-1.5 bg-green-50 dark:bg-green-900/30 rounded-lg text-green-700 dark:text-green-300 text-sm font-medium border border-green-200 dark:border-green-800">
+                           <Icon name="CheckCircle" size={14} className="text-green-500" />
+                           {skill}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Languages */}
+                  <div className="pt-6 border-t border-slate-200 dark:border-slate-600">
+                    <h3 className="font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                      <Icon name="Globe" size={18} className="text-purple-600" />
+                      {t.skills.languages}
+                    </h3>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="bg-white dark:bg-slate-600 p-4 rounded-xl border border-slate-200 dark:border-slate-500">
+                        <div className="font-medium text-slate-900 dark:text-white">{t.skills.turkish}</div>
+                        <div className="text-sm text-slate-500 dark:text-slate-400 mt-1">{t.skills.native}</div>
+                      </div>
+                      <div className="bg-white dark:bg-slate-600 p-4 rounded-xl border border-slate-200 dark:border-slate-500">
+                        <div className="font-medium text-slate-900 dark:text-white">{t.skills.english}</div>
+                        <div className="text-sm text-slate-500 dark:text-slate-400 mt-1">{t.skills.englishLevel}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Education */}
+              <div>
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-3">
+                  <span className="w-2 h-8 bg-blue-600 rounded-full"></span>
+                  {t.education.title}
+                </h2>
+                <div className="space-y-6">
+                  {t.educationList.map((edu) => (
+                    <div key={edu.id} className="flex gap-4 p-6 rounded-2xl bg-slate-50 dark:bg-slate-700/50 border border-slate-100 dark:border-slate-600 hover:border-blue-200 dark:hover:border-blue-500 transition-colors">
+                      <div className="mt-1">
+                        <div className="w-12 h-12 bg-white dark:bg-slate-600 rounded-lg shadow-sm flex items-center justify-center text-blue-600 dark:text-blue-400">
+                          <Icon name="GraduationCap" size={24} />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-lg text-slate-900 dark:text-white">{edu.school}</h3>
+                        <p className="text-slate-700 dark:text-slate-300 font-medium">{edu.degree}</p>
+                        <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">{edu.period}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <!-- Ana gradient - Kozmik mavi -->
+    <linearGradient id="cosmicBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6"/>
+      <stop offset="50%" style="stop-color:#1D4ED8"/>
+      <stop offset="100%" style="stop-color:#1E3A8A"/>
+    </linearGradient>
+    
+    <!-- Parlak vurgu gradient -->
+    <linearGradient id="glowAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60A5FA"/>
+      <stop offset="100%" style="stop-color:#3B82F6"/>
+    </linearGradient>
+    
+    <!-- Data pulse efekti -->
+    <radialGradient id="dataPulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#93C5FD"/>
+      <stop offset="70%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#1E40AF"/>
+    </radialGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Inner shadow -->
+    <filter id="innerShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feOffset dx="2" dy="4"/>
+      <feGaussianBlur stdDeviation="4" result="offset-blur"/>
+      <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"/>
+      <feFlood flood-color="#1E3A8A" flood-opacity="0.4" result="color"/>
+      <feComposite operator="in" in="color" in2="inverse" result="shadow"/>
+      <feComposite operator="over" in="shadow" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  
+  <!-- Arka plan - Yuvarlatılmış kare -->
+  <rect x="20" y="20" width="472" height="472" rx="100" ry="100" fill="url(#cosmicBlue)" filter="url(#innerShadow)"/>
+  
+  <!-- Dekoratif data circuit lines -->
+  <g opacity="0.3">
+    <!-- Sol üst köşe circuit -->
+    <path d="M80 150 L80 100 L130 100" stroke="#93C5FD" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="80" cy="150" r="6" fill="#93C5FD"/>
+    <circle cx="130" cy="100" r="6" fill="#93C5FD"/>
+    
+    <!-- Sağ alt köşe circuit -->
+    <path d="M432 362 L432 412 L382 412" stroke="#93C5FD" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="432" cy="362" r="6" fill="#93C5FD"/>
+    <circle cx="382" cy="412" r="6" fill="#93C5FD"/>
+  </g>
+  
+  <!-- Ana "İ" harfi - Modern tasarım -->
+  <g transform="translate(256, 256)">
+    
+    <!-- İ harfinin gövdesi - 3D efektli dikdörtgen -->
+    <rect x="-45" y="-80" width="90" height="200" rx="20" ry="20" fill="white" opacity="0.95"/>
+    
+    <!-- Üstteki nokta - Data node olarak tasarlandı -->
+    <g filter="url(#glow)">
+      <!-- Dış halka -->
+      <circle cx="0" cy="-145" r="55" fill="none" stroke="white" stroke-width="8" opacity="0.4"/>
+      
+      <!-- Ana nokta -->
+      <circle cx="0" cy="-145" r="42" fill="url(#dataPulse)"/>
+      
+      <!-- İç parlak nokta -->
+      <circle cx="0" cy="-145" r="25" fill="white" opacity="0.9"/>
+      
+      <!-- Merkez pulse -->
+      <circle cx="-8" cy="-152" r="10" fill="white" opacity="0.6"/>
+    </g>
+    
+    <!-- Gövde üzerindeki data flow çizgileri -->
+    <g opacity="0.6">
+      <rect x="-25" y="-50" width="50" height="6" rx="3" fill="url(#glowAccent)"/>
+      <rect x="-25" y="-30" width="35" height="6" rx="3" fill="url(#glowAccent)"/>
+      <rect x="-25" y="-10" width="50" height="6" rx="3" fill="url(#glowAccent)"/>
+      <rect x="-25" y="10" width="25" height="6" rx="3" fill="url(#glowAccent)"/>
+      <rect x="-25" y="30" width="50" height="6" rx="3" fill="url(#glowAccent)"/>
+      <rect x="-25" y="50" width="40" height="6" rx="3" fill="url(#glowAccent)"/>
+      <rect x="-25" y="70" width="50" height="6" rx="3" fill="url(#glowAccent)"/>
+      <rect x="-25" y="90" width="30" height="6" rx="3" fill="url(#glowAccent)"/>
+    </g>
+    
+  </g>
+  
+  <!-- Köşe aksan noktaları - Bağlantı noktaları -->
+  <circle cx="100" cy="256" r="12" fill="url(#glowAccent)" filter="url(#glow)"/>
+  <circle cx="412" cy="256" r="12" fill="url(#glowAccent)" filter="url(#glow)"/>
+  
+  <!-- Bağlantı çizgileri -->
+  <line x1="112" y1="256" x2="166" y2="256" stroke="url(#glowAccent)" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+  <line x1="346" y1="256" x2="400" y2="256" stroke="url(#glowAccent)" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+  
+</svg>

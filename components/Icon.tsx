@@ -17,7 +17,8 @@ import {
   Moon,
   Globe,
   FileText,
-  ExternalLink
+  ExternalLink,
+  Phone
 } from 'lucide-react';
 
 export const Icons = {
@@ -38,7 +39,8 @@ export const Icons = {
   Moon,
   Globe,
   FileText,
-  ExternalLink
+  ExternalLink,
+  Phone
 };
 
 interface IconProps {
