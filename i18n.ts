@@ -98,7 +98,7 @@ export const translations = {
     profile: {
       title: 'SAP B1 Danışmanı',
       location: 'İstanbul, Türkiye',
-      about: "Yönetim Bilişim Sistemleri mezunu, SAP Business One odaklı ERP Danışmanıyım. Hitsoft'ta KOBİ müşterilerine uçtan uca ERP implementasyonu ve süreç danışmanlığı yapıyorum. SQL ile veri analizi, iş süreçleri optimizasyonu ve teknik destek konularında aktif projeler yürütüyorum. Teknik bilgiyi iş değerine dönüştürmeyi ve ölçülebilir sonuçlar üretmeyi önemsiyorum. Side project olarak geliştirdiğim Jira Worklog Manager ile ekip verimliliğinde %85 artış sağladım.",
+      about: "Yönetim Bilişim Sistemleri mezunu, SAP Business One odaklı ERP Danışmanıyım. Hitsoft'ta KOBİ müşterilerine uçtan uca ERP implementasyonu ve süreç danışmanlığı yapıyorum. Zaman zaman kendi ihtiyaçlarımdan yola çıkarak küçük araçlar geliştiriyorum.",
     },
     // Experiences
     experiences: [
@@ -124,18 +124,18 @@ export const translations = {
         id: '3',
         role: 'Mutfak Şefi',
         company: 'TAB Gıda',
-        period: 'Şub 2021 - Eki 2021',
+        period: 'Haz 2021 - Eki 2021',
         location: 'İstanbul, Türkiye',
         description: 'Yoğun tempolu iş ortamında takım çalışması ve müşteri deneyimi odaklı çalışma. Zaman yönetimi ve stres altında performans.',
         skills: ['Takım Çalışması', 'Müşteri İlişkileri', 'Zaman Yönetimi']
       },
       {
         id: '4',
-        role: 'Dijital Dönüşüm Lideri',
+        role: 'Elektrik Teknisyeni - Dijital Dönüşüm',
         company: 'Turna Elektrik',
         period: 'Haz 2015 - Eyl 2021',
         location: 'İstanbul, Türkiye',
-        description: 'Aile işletmesinin dijital dönüşümünü yönettim. Google Business ve sosyal medya entegrasyonu. Müşteri portföyünü 10 referanstan 350+ organik müşteriye çıkardım. İşletme cirosunda %400+ artış sağladım.',
+        description: 'Aile işletmesinin dijital dönüşümünü yönettim. Google Business entegrasyonu. Müşteri portföyünü 10 referanstan 350+ organik müşteriye çıkardım. İşletme cirosunda artış sağladım.',
         skills: ['Dijital Dönüşüm', 'Strateji', 'Operasyon Yönetimi']
       }
     ],
