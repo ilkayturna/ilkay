@@ -227,13 +227,13 @@ const App: React.FC = () => {
                     {t.hero.contact}
                   </a>
                   <a 
-                    href="https://calendly.com/" 
+                    href={PROFILE.linkedin} 
                     target="_blank"
                     rel="noreferrer"
                     className="px-6 py-3 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-600 rounded-lg font-semibold hover:bg-slate-50 dark:hover:bg-slate-600 transition-all flex items-center gap-2 group"
                   >
-                    <Icon name="Calendar" size={20} className="text-blue-600 group-hover:scale-110 transition-transform" />
-                    {t.hero.bookCall}
+                    <Icon name="Linkedin" size={20} className="text-blue-600 group-hover:scale-110 transition-transform" />
+                    LinkedIn
                   </a>
                 </div>
               </div>
