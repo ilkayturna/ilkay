@@ -19,6 +19,7 @@ export const translations = {
       subtitle: 'Yazılım projelerinde, özellikle SAP Business One ve iş süreçleri geliştirme alanlarında deneyimliyim.',
       connect: 'Bağlantı Kur',
       contact: 'İletişime Geç',
+      bookCall: '15 Dk Tanışma Toplantısı',
       call: 'Ara',
     },
     // About Section
@@ -49,6 +50,7 @@ export const translations = {
     projects: {
       title: 'Projelerim',
       viewProject: 'Canlı Demo →',
+      viewWebsite: 'Web Sitesi →',
       projectsList: [
         {
           id: '1',
@@ -75,7 +77,8 @@ export const translations = {
             'İşletme cirosunda %400+ artış',
             'Haftalık stratejik planlama sistemi kurulumu'
           ],
-          tags: ['Dijital Strateji', 'İş Geliştirme', 'Operasyon']
+          tags: ['Dijital Strateji', 'İş Geliştirme', 'Operasyon'],
+          link: 'https://turna-elektrik.vercel.app/'
         }
       ]
     },
@@ -193,17 +196,80 @@ export const translations = {
     skillsList: {
       technical: [
         "ERP",
+        "SSMS & HANA",
+        "Crystal Reports",
+        "DTW",
+        "B1 Service Layer API",
+        "Power BI",
+        "Query Optimization",
         "Git&Github",
-        "SQL",
         "Python",
         "MsOffice"
       ],
       soft: [
+        "BPMN",
+        "Gereksinim Analizi",
         "İş Analizi",
         "Sorun Çözme",
         "Takım Çalışması",
         "Müşteri İletişimi",
         "Proje Yönetimi"
+      ]
+    },
+    // Case Studies
+    caseStudies: {
+      title: 'Çözülen Problemler',
+      items: [
+        {
+          id: '1',
+          title: 'Üretim Sorgu Optimizasyonu',
+          challenge: 'Müşterinin stok raporu 10+ dakikada yükleniyordu, gecikmelere neden oluyordu.',
+          solution: 'SQL mantığı yeniden kurgulandı ve HANA calculation view uygulandı.',
+          impact: 'Raporlama süresi 15 saniyeye düştü (%97 iyileştirme).'
+        }
+      ]
+    },
+    // Code Visualizer
+    codeVisualizer: {
+      title: 'Kodun Derinlikleri',
+      caption: 'Sadece konfigüre etmem; özel çözümler geliştiririm.',
+      code: `/* 
+ * Optimizing Inventory Valuation Query
+ * Legacy execution time: 10m 23s
+ * Optimized execution time: 15s
+ */
+
+CREATE PROCEDURE [dbo].[USP_GetStockValuation] 
+    @ItemDate datetime 
+AS 
+BEGIN 
+    SET NOCOUNT ON; 
+
+    -- Utilizing CTE for better readability and performance
+    WITH StockCTE AS (
+        SELECT 
+            T0.ItemCode, 
+            T0.ItemName,
+            SUM(T1.InQty - T1.OutQty) as OnHand,
+            AVG(T1.Price) as AvgPrice
+        FROM OITM T0 
+        INNER JOIN OINM T1 ON T0.ItemCode = T1.ItemCode
+        WHERE T1.DocDate <= @ItemDate
+        GROUP BY T0.ItemCode, T0.ItemName
+    )
+    SELECT * FROM StockCTE WHERE OnHand > 0;
+END`
+    },
+    // Testimonials
+    testimonials: {
+      title: 'Referanslar',
+      items: [
+        {
+          id: '1',
+          text: "İlkay, teknik karmaşıklık ile iş ihtiyaçları arasındaki boşluğu mükemmel bir şekilde dolduruyor.",
+          author: "Erman Hoca",
+          role: "Eski Proje Yöneticisi"
+        }
       ]
     },
   },
@@ -219,18 +285,19 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      badge: 'SAP B1 Consultant',
-      badges: ['SAP B1 Consultant', 'ERP Specialist', 'Process Analyst'],
+      badge: 'SAP Business One Consultant',
+      badges: ['SAP Business One Consultant', 'Technical Consultant', 'Process Analyst'],
       greeting: "Hello, I'm",
-      subtitle: 'Jr. ERP Consultant specializing in SAP Business One implementation for SMEs, driving business efficiency through SQL and process analysis.',
+      subtitle: 'Bridging business processes with technical SAP Business One solutions (SQL/HANA). I specialize in optimizing ERP workflows and delivering data-driven insights.',
       connect: 'Connect',
       contact: 'Contact Me',
+      bookCall: 'Book a 15-min Intro Call',
       call: 'Call',
     },
     // About Section
     about: {
       title: 'About Me',
-      clickToView: 'Click to view →',
+      clickToView: 'View Detail →',
     },
     // Experience Section
     experience: {
@@ -243,8 +310,8 @@ export const translations = {
     // Skills Section
     skills: {
       title: 'Skills',
-      technical: 'Technical Skills',
-      soft: 'Soft Skills',
+      technical: 'Technical Expertise',
+      soft: 'Professional Skills',
       languages: 'Languages',
       turkish: 'Turkish',
       english: 'English',
@@ -254,68 +321,70 @@ export const translations = {
     // Projects Section
     projects: {
       title: 'Projects',
-      viewProject: 'Live Demo →',
+      viewProject: 'View Project',
+      viewWebsite: 'Visit Website',
       projectsList: [
         {
           id: '1',
           title: 'Jira Worklog Manager',
-          description: 'AI-powered productivity tool solving manual worklog entry problem.',
+          description: 'A custom Full-Stack Web Application designed to automate time tracking and enhance team productivity.',
           highlights: [
-            'Problem: 30+ minutes daily manual Jira log entry',
-            'Solution: React + AI automated worklog management',
-            'Result: 85% efficiency gain (30min → 5min)',
-            'Jira Cloud API integration for real-time sync',
-            'Drag-and-drop interface with smart time distribution'
+            'Problem: Manual data entry consumed 30+ minutes daily per developer.',
+            'Solution: Orchestrated a React & AI-powered automated worklog system.',
+            'Result: Achieved 85% efficiency gain (reduced to 5 min/day).',
+            'Integrated Jira Cloud API for real-time bi-directional synchronization.',
+            'Implemented Drag-and-drop UI with smart algorithm for time distribution.'
           ],
-          tags: ['React', 'TypeScript', 'AI', 'Jira API'],
+          tags: ['React', 'TypeScript', 'Process Automation', 'Jira API', 'Full-Stack'],
           link: 'https://jira-worklog-ivory.vercel.app/'
         },
         {
           id: '2',
           title: 'Turna Electric - Digital Transformation',
-          description: 'Strategy project transforming traditional family business to digital platform.',
+          description: 'Strategic Digital Transformation initiative for a traditional retail business.',
           highlights: [
-            'Problem: Only 5-10 referral customers per month',
-            'Solution: Google Business + social media integration',
-            'Result: 350+ organic customer portfolio',
-            '400%+ increase in business revenue',
-            'Weekly strategic planning system implementation'
+            'Problem: Limited local reach (5-10 monthly referrals).',
+            'Solution: Deployed Google Business & Social Media integration ecosystem.',
+            'Result: Scaled to 350+ organic customer portfolio.',
+            'Drove 400%+ increase in business revenue through digital channels.',
+            'Established weekly strategic planning and operational analytic pipelines.'
           ],
-          tags: ['Digital Strategy', 'Business Development', 'Operations']
+          tags: ['Digital Strategy', 'Business Growth', 'Operations Management'],
+          link: 'https://turna-elektrik.vercel.app/'
         }
       ]
     },
     // Contact Section
     contact: {
-      title: "Let's Work Together",
-      subtitle: 'Get in touch with me for job opportunities and projects.',
+      title: "Let's Connect",
+      subtitle: 'Open to opportunities in SAP Business One consultancy and ERP development projects.',
       copyright: 'All rights reserved.',
     },
     // Chat Widget
     chat: {
-      welcome: "Hello! I'm İlkay's AI assistant. You can ask me questions about my experience, skills, or education.",
+      welcome: "Hello! I'm İlkay's AI Assistant. Ask me about his experience with SAP B1, SQL expertise, or completed projects.",
       placeholder: 'Ask a question...',
-      assistant: 'İlkay Assistant',
+      assistant: 'İlkay AI',
       poweredBy: 'Powered by Gemini',
-      error: 'A connection error occurred. Please try again later.',
-      noResponse: "Sorry, I can't respond right now.",
+      error: 'Connection error. Please try again later.',
+      noResponse: "I'm currently offline, please try again later.",
     },
     // Profile data
     profile: {
-      title: 'SAP B1 Consultant',
+      title: 'SAP Business One Consultant',
       location: 'Istanbul, Turkey',
-      about: "Management Information Systems graduate, SAP Business One focused ERP Consultant. At Hitsoft, I provide end-to-end ERP implementation and process consulting for SME clients. I work on data analysis with SQL, business process optimization, and technical support. I focus on transforming technical knowledge into business value and producing measurable results. My side project Jira Worklog Manager achieved 85% efficiency improvement in team productivity.",
+      about: "As a Management Information Systems graduate and SAP Business One Consultant at Hitsoft, I bridge the gap between technical possibilities and business requirements. My expertise lies in end-to-end ERP implementations, where I leverage SQL and HANA to optimize data flows and business processes. Beyond standard configuration, I develop custom solutions to solve complex operational challenges, always aimed at driving measurable efficiency and business growth.",
     },
     // Experiences
     experiences: [
       {
         id: '1',
-        role: 'SAP B1 Consultant',
+        role: 'SAP Business One Consultant',
         company: 'Hitsoft',
         period: 'Jul 2025 - Present',
         location: 'Istanbul, Turkey',
-        description: 'End-to-end SAP Business One ERP implementation and process consulting for SME clients. Custom reporting solutions with SQL. Process improvement in sales, purchasing and inventory modules. Active role in support processes for 10+ companies.',
-        skills: ['SAP B1', 'SQL', 'ERP', 'Process Analysis']
+        description: 'delivering end-to-end SAP Business One implementations and process consultancy for SME clients. Spearheading data analysis and custom reporting initiatives using SQL and Crystal Reports.',
+        skills: ['SAP Business One', 'SQL', 'HANA', 'Crystal Reports', 'FMS', 'System Configuration', 'Data Migration']
       },
       {
         id: '2',
@@ -323,17 +392,17 @@ export const translations = {
         company: 'Hitsoft',
         period: 'Feb 2025 - Jun 2025',
         location: 'Istanbul, Turkey',
-        description: 'Hands-on experience in SAP B1 technical support and troubleshooting. Analysis and documentation of customer requests. Working alongside consultant team on live projects.',
-        skills: ['Technical Support', 'Documentation', 'Client Communication']
+        description: 'Gained hands-on experience in technical troubleshooting and system maintenance. Assisted senior consultants in live implementation projects and documentation of business blueprints.',
+        skills: ['Technical Support', 'Documentation', 'System Analysis']
       },
       {
         id: '3',
-        role: 'Kitchen Chef',
+        role: 'Kitchen Operations Staff',
         company: 'TAB Gıda',
         period: 'Feb 2021 - Oct 2021',
         location: 'Istanbul, Turkey',
-        description: 'Teamwork and customer experience focused work in fast-paced environment. Time management and performance under pressure.',
-        skills: ['Teamwork', 'Customer Relations', 'Time Management']
+        description: 'Executed high-volume operational tasks in a fast-paced environment, enhancing team coordination and customer service standards.',
+        skills: ['Team Collaboration', 'Time Management', 'Operational Efficiency']
       },
       {
         id: '4',
@@ -341,8 +410,8 @@ export const translations = {
         company: 'Turna Elektrik',
         period: 'Jun 2015 - Sep 2021',
         location: 'Istanbul, Turkey',
-        description: 'Led digital transformation of family business. Google Business and social media integration. Grew customer portfolio from 10 referrals to 350+ organic customers. Achieved 400%+ increase in business revenue.',
-        skills: ['Digital Transformation', 'Strategy', 'Operations Management']
+        description: 'Led the comprehensive digital transformation of a family-owned business. Implemented digital marketing strategies that resulted in 400%+ revenue growth and operational modernization.',
+        skills: ['Digital Transformation', 'Strategic Planning', 'Business Development']
       }
     ],
     // Education
@@ -350,19 +419,19 @@ export const translations = {
       {
         id: '1',
         school: 'Anadolu University',
-        degree: 'Associate, Computer Programming',
+        degree: 'Associate Degree, Computer Programming',
         period: 'Oct 2024 - Jun 2026'
       },
       {
         id: '2',
         school: 'Sakarya University',
-        degree: 'Bachelor, Management Information Systems',
+        degree: 'Bachelor\'s Degree, Management Information Systems',
         period: 'Sep 2021 - Jun 2025'
       },
       {
         id: '3',
-        school: 'Güngören Anatolian High School',
-        degree: 'High School',
+        school: 'Gungoren Anatolian High School',
+        degree: 'High School Diploma',
         period: '2017 - 2021'
       }
     ],
@@ -399,17 +468,79 @@ export const translations = {
     skillsList: {
       technical: [
         "SAP Business One",
-        "ERP Consulting",
-        "SQL",
-        "Data Analysis",
-        "Process Management"
+        "SSMS & HANA",
+        "Crystal Reports",
+        "DTW",
+        "B1 Service Layer API",
+        "Power BI",
+        "Data Migration",
+        "Query Optimization",
+        "System Configuration"
       ],
       soft: [
-        "Business Analysis",
+        "BPMN",
+        "Requirement Analysis",
+        "Analytical Thinking",
+        "Business Process Analysis",
         "Problem Solving",
-        "Teamwork",
-        "Client Communication",
+        "Client Relations",
         "Project Management"
+      ]
+    },
+    // Case Studies
+    caseStudies: {
+      title: 'Solved Real-World Problems',
+      items: [
+        {
+          id: '1',
+          title: 'Manufacturing Query Optimization',
+          challenge: "Client's stock report took 10+ minutes to load, causing delays.",
+          solution: "Re-engineered the SQL logic and implemented HANA calculation views.",
+          impact: "Reduced reporting time to 15 seconds (97% improvement)."
+        }
+      ]
+    },
+    // Code Visualizer
+    codeVisualizer: {
+      title: 'Under the Hood',
+      caption: 'I don\'t just configure; I build custom solutions.',
+      code: `/* 
+ * Optimizing Inventory Valuation Query
+ * Legacy execution time: 10m 23s
+ * Optimized execution time: 15s
+ */
+
+CREATE PROCEDURE [dbo].[USP_GetStockValuation] 
+    @ItemDate datetime 
+AS 
+BEGIN 
+    SET NOCOUNT ON; 
+
+    -- Utilizing CTE for better readability and performance
+    WITH StockCTE AS (
+        SELECT 
+            T0.ItemCode, 
+            T0.ItemName,
+            SUM(T1.InQty - T1.OutQty) as OnHand,
+            AVG(T1.Price) as AvgPrice
+        FROM OITM T0 
+        INNER JOIN OINM T1 ON T0.ItemCode = T1.ItemCode
+        WHERE T1.DocDate <= @ItemDate
+        GROUP BY T0.ItemCode, T0.ItemName
+    )
+    SELECT * FROM StockCTE WHERE OnHand > 0;
+END`
+    },
+    // Testimonials
+    testimonials: {
+      title: 'Recommendations',
+      items: [
+        {
+          id: '1',
+          text: "İlkay bridges the gap between technical complexity and business needs perfectly.",
+          author: "Mr. Erman",
+          role: "Former Project Manager"
+        }
       ]
     },
   }

@@ -18,7 +18,16 @@ import {
   Globe,
   FileText,
   ExternalLink,
-  Phone
+  Phone,
+  ArrowRight,
+  Terminal,
+  Copy,
+  Target,
+  AlertCircle,
+  Cpu,
+  TrendingUp,
+  Quote,
+  Calendar
 } from 'lucide-react';
 
 export const Icons = {
@@ -40,7 +49,16 @@ export const Icons = {
   Globe,
   FileText,
   ExternalLink,
-  Phone
+  Phone,
+  ArrowRight,
+  Terminal,
+  Copy,
+  Target,
+  AlertCircle,
+  Cpu,
+  TrendingUp,
+  Quote,
+  Calendar
 };
 
 interface IconProps {

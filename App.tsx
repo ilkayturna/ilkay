@@ -3,6 +3,9 @@ import { PROFILE } from './constants';
 import { Language, getTranslation } from './i18n';
 import Icon from './components/Icon';
 import Timeline from './components/Timeline';
+import CaseStudies from './components/CaseStudies';
+import CodeVisualizer from './components/CodeVisualizer';
+import Testimonials from './components/Testimonials';
 
 const App: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -197,9 +200,11 @@ const App: React.FC = () => {
       <main className="pt-16">
         
         {/* Hero Section */}
-        <section className="relative bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 overflow-hidden transition-colors duration-300">
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 dark:opacity-5"></div>
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-blue-50 dark:from-blue-900/20 to-transparent opacity-50"></div>
+        <section className="relative bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 overflow-hidden transition-colors duration-300">
+          {/* Tech/Data Pattern Background */}
+          <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] dark:bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:24px_24px] opacity-40 dark:opacity-20"></div>
+          
+          <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-bl from-blue-100/50 dark:from-blue-900/10 to-transparent opacity-60"></div>
           
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative z-10">
             <div className="flex flex-col md:flex-row items-center gap-12">
@@ -215,27 +220,20 @@ const App: React.FC = () => {
                 </p>
                 <div className="flex flex-wrap justify-center md:justify-start gap-4">
                   <a 
-                    href={PROFILE.linkedin}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="px-6 py-3 bg-slate-900 dark:bg-blue-600 text-white rounded-lg font-semibold hover:bg-slate-800 dark:hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
-                  >
-                    <Icon name="Linkedin" size={20} />
-                    {t.hero.connect}
-                  </a>
-                  <a 
                     href={`mailto:${PROFILE.email}`}
-                    className="px-6 py-3 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-600 rounded-lg font-semibold hover:bg-slate-50 dark:hover:bg-slate-600 transition-all flex items-center gap-2"
+                    className="px-6 py-3 bg-slate-900 dark:bg-blue-600 text-white rounded-lg font-semibold hover:bg-slate-800 dark:hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
                   >
                     <Icon name="Mail" size={20} />
                     {t.hero.contact}
                   </a>
                   <a 
-                    href="tel:+905343622375"
-                    className="px-6 py-3 bg-green-600 dark:bg-green-500 text-white rounded-lg font-semibold hover:bg-green-700 dark:hover:bg-green-600 transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
+                    href="https://calendly.com/" 
+                    target="_blank"
+                    rel="noreferrer"
+                    className="px-6 py-3 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-600 rounded-lg font-semibold hover:bg-slate-50 dark:hover:bg-slate-600 transition-all flex items-center gap-2 group"
                   >
-                    <Icon name="Phone" size={20} />
-                    {t.hero.call}
+                    <Icon name="Calendar" size={20} className="text-blue-600 group-hover:scale-110 transition-transform" />
+                    {t.hero.bookCall}
                   </a>
                 </div>
               </div>
@@ -266,17 +264,19 @@ const App: React.FC = () => {
               <p>{t.profile.about}</p>
             </div>
             
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
               {t.certifications.map((cert) => {
                 const CardContent = (
                   <>
                     <div className="w-10 h-10 bg-blue-50 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 rounded-lg flex items-center justify-center mb-4">
                       <Icon name="Award" size={24} />
                     </div>
-                    <h3 className="font-bold text-slate-900 dark:text-white text-sm mb-1">{cert.title}</h3>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">{cert.issuer}</p>
-                    <p className="text-xs text-slate-400 dark:text-slate-500 mt-2">{cert.date}</p>
-                    {cert.link && <p className="text-xs text-blue-500 mt-2">{t.about.clickToView}</p>}
+                    <div>
+                      <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1">{cert.title}</h3>
+                      <p className="text-sm text-slate-500 dark:text-slate-400">{cert.issuer}</p>
+                      <p className="text-xs text-slate-400 dark:text-slate-500 mt-2 font-mono">{cert.date}</p>
+                    </div>
+                    {cert.link && <p className="text-sm text-blue-600 font-medium mt-4 flex items-center gap-1">{t.about.clickToView} <Icon name="ArrowRight" size={14}/></p>}
                   </>
                 );
                 
@@ -347,9 +347,9 @@ const App: React.FC = () => {
                         href={project.link} 
                         target="_blank" 
                         rel="noreferrer"
-                        className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium hover:underline"
+                        className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 dark:bg-blue-600 text-white rounded-lg font-medium hover:bg-slate-800 dark:hover:bg-blue-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
                       >
-                        {t.projects.viewProject}
+                        {project.id === '2' ? t.projects.viewWebsite : t.projects.viewProject}
                         <Icon name="ExternalLink" size={16} />
                       </a>
                     )}
@@ -358,6 +358,17 @@ const App: React.FC = () => {
               ))}
             </div>
           </div>
+        </section>
+
+        {/* Code Visualizer Section */}
+        <section className="bg-slate-900 py-16">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <CodeVisualizer 
+                    title={t.codeVisualizer.title}
+                    caption={t.codeVisualizer.caption}
+                    code={t.codeVisualizer.code}
+                 />
+            </div>
         </section>
 
         {/* Education & Skills Grid */}
@@ -450,6 +461,15 @@ const App: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* Testimonials */}
+        {/*
+        <section className="bg-white dark:bg-slate-800 transition-colors duration-300">
+             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <Testimonials title={t.testimonials.title} testimonials={t.testimonials.items} />
+             </div>
+        </section>
+        */}
 
         {/* Contact/Footer */}
         <section id="contact" className="bg-slate-900 dark:bg-slate-950 text-white py-20 transition-colors duration-300">

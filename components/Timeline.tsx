@@ -35,9 +35,9 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
           <p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">{exp.description}</p>
 
           {exp.skills && (
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mt-3">
               {exp.skills.map((skill, idx) => (
-                <span key={idx} className="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs rounded-md border border-slate-200 dark:border-slate-600">
+                <span key={idx} className="px-3 py-1 bg-blue-50 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-xs font-semibold rounded-full border border-blue-200 dark:border-blue-800 shadow-sm">
                   {skill}
                 </span>
               ))}

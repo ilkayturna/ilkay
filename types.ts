@@ -42,6 +42,21 @@ export interface TranslatedEducation {
   period: string;
 }
 
+export interface CaseStudy {
+  id: string;
+  title: string;
+  challenge: string;
+  solution: string;
+  impact: string;
+}
+
+export interface Testimonial {
+  id: string;
+  text: string;
+  author: string;
+  role: string;
+}
+
 export interface ChatMessage {
   id: string;
   role: 'user' | 'model';
